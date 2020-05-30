@@ -17,7 +17,7 @@ $(document).ready(function(){
     $(".voltarEditar").click(function(){
         $(this).parent().parent().hide('slow');
         var html= '';
-        
+
         axios.get(urlBase+'/api/visualizar', {
             headers: {
                 'Authorization': 'Bearer '+token

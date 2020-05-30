@@ -19,7 +19,7 @@
             <li>APP_DEBUG => se for colocar em produção, troque para false</li>
         </ul>
     </li>
-    <li>Crie as tabelas do banco de dados, conforme estão no er => <u>database/er/er_person.mwb</u></li>    
+    <li>Crie as tabelas do banco de dados, conforme estão no er => <u>database/er/er_person.mwb</u> e no sql => <u>database/er/person_sql.sql</u></li>    
     <li>Execute o comando: <u>php artisan config:cache</u></li>
     <li>Se não estiver utilizando um servidor apache, pode executar o comando <u>php artisan serve</u>, que o mesmo executa um servidor para rodar o projeto, mas é necessario ter o composer, php e mysql instalados na máquina.</li>
 </ol>
