@@ -14,6 +14,34 @@ $(document).ready(function(){
         $(this).next().toggle();
     });
 
+    $(".voltarEditar").click(function(){
+        $(this).parent().parent().hide('slow');
+        var html= '';
+        
+        axios.get(urlBase+'/api/visualizar', {
+            headers: {
+                'Authorization': 'Bearer '+token
+            }
+        })
+        .then(function (response) {
+            console.log(response);
+            $.map(response.data, function(item, key){
+                let exclui= 'exclui-'+key;
+
+                html += "<tr><td>"+item.name+"</td><td>"+item.birth_date+"</td><td>"+item.gender+"</td><td>"+item.cpf+"</td><td>"+item.phone+"</td><td>"+item.email+"</td>" +
+                    "<td>" +
+                    "<button onclick='abreJanelaAlterar("+item.idperson+");'>Alterar</button>&nbsp;&nbsp;" +
+                    "<button onclick='excluiPessoa("+item.idperson+", "+key+");' class='"+exclui+"'>Exluir</button>" +
+                    "</td></tr>";
+            });
+            $("#tableVisuzalizar").empty();
+            $("#tableVisuzalizar").html(html);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    });
+
     $('#btFiltrar').click(function () {
         var html= '';
 
@@ -23,8 +51,6 @@ $(document).ready(function(){
         let cpf= $('#fcpf').val();
         let telefone= $('#ftelefone').val();
         let email= $('#femail').val();
-
-        alert(cpf);
 
         const formData = new FormData();
         formData.append("name", nome);
@@ -137,7 +163,7 @@ function abreJanelaAlterar(id){
     const formData= new FormData();
     formData.append("idperson",id);
 
-    axios.get(urlBase+'/api/visualizar', formData, {
+    axios.get(urlBase+'/api/visualizar', {
         headers: {
             'Authorization': 'Bearer '+token
         }

@@ -150,7 +150,7 @@
 
 <div class="box-modal" id="modal-Editar">
     <div class="box-back">
-        <a href="javascript:void();" class="voltar"><i class="material-icons left">keyboard_arrow_left</i> VOLTAR</a>
+        <a href="javascript:void();" class="voltarEditar"><i class="material-icons left">keyboard_arrow_left</i> VOLTAR</a>
     </div>
     <div class="box-topo">
         <div class="box-functions">
