@@ -35,7 +35,7 @@ class Person extends Model
      */
     protected $hidden = [];
 
-    public function getBirthDateAttribute($value){
+    public function getBirthDate($value){
         return date('d/m/Y',strtotime($value));
     }
 }

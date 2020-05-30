@@ -126,7 +126,7 @@
                 <label for="femail">E-mail</label>
             </div>
             <div class="col s6">
-                <button id="btFiltrar" class="waves-effect waves-light btn-large">Cadastrar</button>
+                <button id="btFiltrar" class="waves-effect waves-light btn-large">Filtrar</button>
             </div>
         </div>
 
@@ -148,6 +148,56 @@
     </div>
 </div>
 
+<div class="box-modal" id="modal-Editar">
+    <div class="box-back">
+        <a href="javascript:void();" class="voltar"><i class="material-icons left">keyboard_arrow_left</i> VOLTAR</a>
+    </div>
+    <div class="box-topo">
+        <div class="box-functions">
+            <div class="row">
+                <div class="col s12"><i class="material-icons left">people</i><h4>Editar de Pessoa</h4></div>
+            </div>
+        </div>
+    </div>
+    <div class="box-miolo">
+        <form action="#" method="post" id="formCadastro">
+            <div class="row">
+                <input name="idperson" type="hidden" id="eidperson" />
+                <div class="input-field col s12">
+                    <input id="ename" type="text" class="validate" required>
+                    <label for="ename">Nome</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="edate" type="date" class="validate">
+                    <label for="edate">Data de Nascimento</label>
+                </div>
+                <div class="input-field col s12">
+                    <select name="sexo" id="esexo">
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                    </select>
+                    <label>Sexo</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="ecpf" type="text" class="validate">
+                    <label for="ecpf">CPF</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="etelefone" type="text" class="validate">
+                    <label for="etelefone">Telefone</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="eemail" type="email" class="validate" required>
+                    <label for="eemail">E-mail</label>
+                </div>
+                <div class="col s12">
+                    <button id="btEditar" class="waves-effect waves-light btn-large">Editar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 <input id="urlBase" type="hidden" value="{{url('')}}" />
 
 <!-- Scripts Javascript-->
@@ -155,6 +205,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="{{url('js/materialize-bootbox-master/dist/mzbox.js')}}" type="text/javascript"></script>
 <script src="{{url('js/functios.js')}}" type="text/javascript"></script>
 <script src="{{url('js/visualizacao.js')}}" type="text/javascript"></script>
 <script src="{{url('js/cadastro.js')}}" type="text/javascript"></script>
