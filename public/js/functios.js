@@ -2,6 +2,9 @@ $(document).ready(function(){
     var token= localStorage.getItem('token');
     var urlBase= $("#urlBase").val();
 
+    $(".telefoneMask").mask("(99) 99999-9999");
+    $(".cpfMask").mask("999.999.999-99");
+
     if(token == '' || token == undefined){
         window.open('/login','_self');
     }

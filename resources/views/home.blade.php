@@ -61,11 +61,11 @@
                     <label>Sexo</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="cpf" type="text" class="validate">
+                    <input id="cpf" type="text" class="validate cpfMask">
                     <label for="cpf">CPF</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="telefone" type="text" class="validate">
+                    <input id="telefone" type="text" class="validate telefoneMask">
                     <label for="telefone">Telefone</label>
                 </div>
                 <div class="input-field col s12">
@@ -114,11 +114,11 @@
                 <label>Sexo</label>
             </div>
             <div class="input-field col s12">
-                <input id="fcpf" type="text" class="validate">
+                <input id="fcpf" type="text" class="validate cpfMask">
                 <label for="fcpf">CPF</label>
             </div>
             <div class="input-field col s12">
-                <input id="ftelefone" type="text" class="validate">
+                <input id="ftelefone" type="text" class="validate telefoneMask">
                 <label for="ftelefone">Telefone</label>
             </div>
             <div class="input-field col s12">
@@ -179,11 +179,11 @@
                     <label>Sexo</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="ecpf" type="text" class="validate">
+                    <input id="ecpf" type="text" class="validate cpfMask">
                     <label for="ecpf">CPF</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="etelefone" type="text" class="validate">
+                    <input id="etelefone" type="text" class="validate telefoneMask">
                     <label for="etelefone">Telefone</label>
                 </div>
                 <div class="input-field col s12">
@@ -205,6 +205,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="{{url('js/materialize-bootbox-master/dist/mzbox.js')}}" type="text/javascript"></script>
 <script src="{{url('js/functios.js')}}" type="text/javascript"></script>
 <script src="{{url('js/visualizacao.js')}}" type="text/javascript"></script>

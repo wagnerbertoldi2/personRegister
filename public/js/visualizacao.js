@@ -90,6 +90,7 @@ $(document).ready(function(){
         let cpf= $('#ecpf').val();
         let telefone= $('#etelefone').val();
         let email= $('#eemail').val();
+        let idperson= $('#eidperson').val();
 
         if(nome == ''){
             M.toast({html: 'Favor, preencha o campo nome.'});
@@ -103,6 +104,7 @@ $(document).ready(function(){
             formData.append("cpf", cpf);
             formData.append("phone", telefone);
             formData.append("email", email);
+            formData.append("idperson", idperson);
 
             axios.post(urlBase+'/api/editar', formData, {
                 headers: {
